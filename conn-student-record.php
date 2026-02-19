@@ -1,9 +1,16 @@
 <?php
+    $server = "localhost";
+   
+    $user = "root";
+    $password = "";
+    $db = "_sms";
+    
+    $conn = mysqli_connect($server, $user, $password, $db);
 
-$con=mysqli_connect("localhost","root","","srms");
+    if (!$conn) {
+        header('Location: ../errors/error.html');
+        exit();
+    }
 
-if(mysqli_connect_error())
-{
-    echo "Cannot Connect";
-}
+
 ?>
